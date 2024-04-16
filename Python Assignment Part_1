@@ -1,0 +1,2366 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/SSM-15431/python-basic/blob/main/Python%20Assignment%20Part_1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Print Data Type Example\n",
+        "x = 1 # int\n",
+        "print(type(x))\n",
+        "x = -1\n",
+        "print(type(x))\n",
+        "x = 1.1\n",
+        "print(type(x))\n",
+        "x = 1.1j\n",
+        "print(type(x))"
+      ],
+      "metadata": {
+        "id": "jLQuN572PVAT",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9ade0f3c-d29d-4747-dce9-2b2899a95f6b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'int'>\n",
+            "<class 'int'>\n",
+            "<class 'float'>\n",
+            "<class 'complex'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "bXEPVrQtTHQ6"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#List Data Type example\n",
+        "list = [123, \"abcd\", 10.2]\n",
+        "list1 = [\"hello\"]\n",
+        "print(type(list))\n",
+        "print(list)\n",
+        "print(list[0:2])\n",
+        "print(list[1])\n",
+        "print(list*2)\n",
+        "print(list+list1)\n",
+        "print(*list)\n",
+        "print(list[1],list[2])\n",
+        "list1[0]=\"I am student\"\n",
+        "print(list1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "50GbDnuENIkV",
+        "outputId": "de623587-2b3f-449a-b767-469bd7f371de"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'list'>\n",
+            "[123, 'abcd', 10.2]\n",
+            "[123, 'abcd']\n",
+            "abcd\n",
+            "[123, 'abcd', 10.2, 123, 'abcd', 10.2]\n",
+            "[123, 'abcd', 10.2, 'hello']\n",
+            "123 abcd 10.2\n",
+            "abcd 10.2\n",
+            "['I am student']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Tuple Data Type (immutable) Example\n",
+        "tuple1=(123,\"hello\")\n",
+        "tuple1[0]=55\n",
+        "print(tuple1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 200
+        },
+        "id": "-VjSiYVcSWNL",
+        "outputId": "c5f8baf8-76bc-46f9-f6d6-4e18d828a7f6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "'tuple' object does not support item assignment",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-19-a639fb00ba38>\u001b[0m in \u001b[0;36m<cell line: 3>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m#Tuple Data Type\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0mtuple1\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m123\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\"hello\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 3\u001b[0;31m \u001b[0mtuple1\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m55\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      4\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mtuple1\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: 'tuple' object does not support item assignment"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Set Data Type Example\n",
+        "basket ={\"apple\", \"orange\", 55, 55}\n",
+        "print(basket)\n",
+        "a = set(\"abcdefg\")\n",
+        "print(a)\n",
+        "a.add(9)\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "am8Xq1zCTDqz",
+        "outputId": "b237b9cb-dc6a-4e7e-d479-2166a9c6f87d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{55, 'orange', 'apple'}\n",
+            "{'e', 'g', 'b', 'c', 'f', 'd', 'a'}\n",
+            "{'e', 9, 'g', 'b', 'c', 'f', 'd', 'a'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Frozen Set Data Type Example\n",
+        "b =frozenset(\"asdfagsa\")\n",
+        "print(b)\n",
+        ">frozenset({\"f\",\"g\",\"d\",\"a\",\"s\"})\n",
+        "cities =frozenset([\"Frankfurt\", \"Basel\",\"Freiburg\"])\n",
+        "print(cities)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 109
+        },
+        "id": "xJSROfBbUP4Z",
+        "outputId": "ae1b3c3d-97c7-4c18-a91b-e184d5d74ed2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (<ipython-input-24-871da7515038>, line 4)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-24-871da7515038>\"\u001b[0;36m, line \u001b[0;32m4\u001b[0m\n\u001b[0;31m    >frozenset({\"f\",\"g\",\"d\",\"a\",\"s\"})\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Dictionary Data Type (Cont'd) Example\n",
+        "dic ={\"name\":\"red\",\"age\":20}\n",
+        "print(dic)\n",
+        "print(dic[\"name\"])\n",
+        "print(dic.values())\n",
+        "print(dic.keys())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "O7usmKL1ayth",
+        "outputId": "e93f6ee0-1a63-42b0-b7e5-5eebd7bd3ebc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'name': 'red', 'age': 20}\n",
+            "red\n",
+            "dict_values(['red', 20])\n",
+            "dict_keys(['name', 'age'])\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Boolean Data Type Example\n",
+        ">>> b =True\n",
+        ">>> print(b)\n",
+        ">>> c =False\n",
+        ">>> print(b,c)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zG-Ws6u1dl_9",
+        "outputId": "15916652-ae2a-46e7-d032-bdafa2034f69"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "True False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Binary Data Types Example\n",
+        "x = bytes(10)\n",
+        "print(x)\n",
+        "x = bytearray(10)\n",
+        "print(x)\n",
+        "x = memoryview(bytes(10))\n",
+        "print"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yrL-MoH7eezt",
+        "outputId": "5b1cd2d5-3120-4ee1-fb0f-4337f68c6e8d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'\n",
+            "bytearray(b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00')\n",
+            "<memory at 0x7fb4287b7100>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#String Data Type (Cont'd) Example\n",
+        "a_str = \"Hello World\"\n",
+        "print(a_str)\n",
+        "print(a_str[0])\n",
+        "print(a_str[5])\n",
+        "print(a_str[0:5])\n",
+        "print(\"hello\"+\"world\")\n",
+        "print(\"hello\"*3)\n",
+        "print(\"hello\"[0])\n",
+        "print(\"hello\"[-1])\n",
+        "print(\"hello\"[1:4])\n",
+        "print(len(\"hello\"))\n",
+        "print(\"hello\"<\"jello\")\n",
+        "print(\"e\"in\"hello\")\n",
+        "\"escapes:\\n etc,\\033 etc,\\if etc\"\n",
+        "print(\"Hello World\")#\n",
+        "a = \"\"\"multiple data, multi_line comments, can display a string literal, a multiline string to a variable\"\"\"\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "X-psnNdRgpku",
+        "outputId": "2fdfbf1d-6a30-420c-8d80-5b329288390a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello World\n",
+            "H\n",
+            " \n",
+            "Hello\n",
+            "helloworld\n",
+            "hellohellohello\n",
+            "h\n",
+            "o\n",
+            "ell\n",
+            "5\n",
+            "True\n",
+            "True\n",
+            "Hello World\n",
+            "multiple data, multi_line comments, can display a string literal, a multiline string to a variable\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Mathematical Operators\n",
+        "#Addition(+)\n",
+        "a,b=5,15\n",
+        "a+b\n",
+        "result = a + b\n",
+        "print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6gBWi6z5bhKm",
+        "outputId": "57177932-4ea4-4dea-afd3-35efaa529811"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a,b = 5, 15\n",
+        "result = a*b\n",
+        "print(a*b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zLqiVcE9sOCY",
+        "outputId": "a27bd8f8-8bdd-40a4-956b-61ada341f0ed"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "75\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a,b = 5, 15\n",
+        "result = a/b\n",
+        "print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TEZ-6qU7st4e",
+        "outputId": "1722bcfd-6f94-4e3e-b312-3c43b9c5e9ec"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0.3333333333333333\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Modulas\n",
+        "a,b = 5, 15\n",
+        "result = a % b\n",
+        "print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eayMAf_0s1b2",
+        "outputId": "9c63f6a3-81e0-45b9-b686-d0a395195cbd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exponent\n",
+        "3**3"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ORG4oeO6s9mE",
+        "outputId": "44bd6641-997a-4c81-fe29-b1b3bb4d92a0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "27"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 43
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Import Operator add\n",
+        "x,y = 100, 150\n",
+        "operator.add(x,y)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IIw7RleooAid",
+        "outputId": "c54abf72-f287-4cbd-a71c-bed4d4ebca8f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "250"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 35
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Import Operator subtraction\n",
+        "x,y = 100, 150\n",
+        "operator.sub(x,y)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4i_8a0A8oNuy",
+        "outputId": "c16a4847-bbc1-4710-86ae-34f9a47af72a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "-50"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 36
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Import Operator Mutiply\n",
+        "x,y = 100, 150\n",
+        "operator.mul(x,y)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0s8ys5nmpUyP",
+        "outputId": "7c5ff7fd-fe61-4289-d7d8-a924cfe01681"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "15000"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 37
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a,b=5,15\n",
+        "a+=b\n",
+        "print(a)\n",
+        "b+=a\n",
+        "print(b)"
+      ],
+      "metadata": {
+        "id": "amBPQJDwd7I-",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9fb6d2b4-e97f-49a2-b788-0962a3c70419"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "20\n",
+            "35\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a,b=5,15\n",
+        "a+b\n",
+        "result = a % b\n",
+        "print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9LQwnHIydhUb",
+        "outputId": "2ad25761-be96-426d-d095-9e37d71fc254"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Operator Precedence\n",
+        "a,b,c,d = 1, 2, 3, 4\n",
+        "d/a+b*c"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Da0y_iBScq6P",
+        "outputId": "f37f7e5c-786c-4181-e52e-b34e6468d5fd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "10.0"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 18
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Operator Precedence\n",
+        "a,b,c,d = 1, 2, 3, 4\n",
+        "d//a**b+c-d*b"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "h0RFwCk8h0dm",
+        "outputId": "af3b6ab1-8f58-4d99-c205-145f71bc85e6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "-1"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 19
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Type Casting (integer)\n",
+        "x = int(1.5)\n",
+        "print (x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ELdZCVk3jJcS",
+        "outputId": "c5e7f2f9-0268-434b-9430-c9ab6fbbfda0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Type Casting (float)\n",
+        "x= float(1.5)\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W94AXekxGVGX",
+        "outputId": "f7a9beca-0880-408e-cd3e-1122b9440b2c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Type Casting (string)\n",
+        "x = str(5)\n",
+        "x+=x\n",
+        "print (x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_Nbl5bJvjpXN",
+        "outputId": "51fd2fb4-c62e-42ff-cd0a-6de43613b908"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "55\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Store input numbers\n",
+        "num1 =int(input(\"Enter first number\"))\n",
+        "num2 =int(input(\"Enter second number\"))\n",
+        "#Add two numbers\n",
+        "sum = float(num1) + float(num2)\n",
+        "#Display the sum\n",
+        "print(\"The sum of num1 and num2 is :\",sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WTzx0xM_lQ8D",
+        "outputId": "d0cce8be-8e08-4cb3-fa4a-74681042b44d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number5\n",
+            "Enter second number5\n",
+            "The sum of num1 and num2 is : 10.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num1 =int(input(\"Enter first number\"))\n",
+        "num2 =int(input(\"Enter second number\"))\n",
+        "#Add two numbers\n",
+        "sum = float(num1) + float(num2)\n",
+        "#Display the sum\n",
+        "print(\"The sum of num1 and num2 is :\",sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4SiDRxSklsh-",
+        "outputId": "dda2cfd8-45f7-4d38-afed-f87fc0855189"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number1\n",
+            "Enter second number1\n",
+            "The sum of num1 and num2 is : 2.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Python Program to find perimeter of a circle using Diameter\n",
+        "pi = 3.14\n",
+        "diameter = int(input(\"Enter the diameter of the circle\"))\n",
+        "radius = diameter/2\n",
+        "perimeter = 2 * pi * radius\n",
+        "print(\"Perimeter of circle is:\", perimeter)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "c2JLmew0mVCQ",
+        "outputId": "d37258f9-6b87-4dab-94c0-a6433b0fa6b4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the diameter of the circle30\n",
+            "Perimeter of circle is: 94.2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Python Program to find perimeter of the triangle\n",
+        "base = int(input(\"Enter the base of the triangle\"))\n",
+        "height = int(input(\"Enter the height of the triangle\"))\n",
+        "perimeter = base * height /2\n",
+        "print(\"Perimeter of the triangle\", perimeter)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7C2FGVWczTRX",
+        "outputId": "6f6e53cb-1cae-4544-9654-a8f3368e10c0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the base of the triangle20\n",
+            "Enter the height of the triangle44\n",
+            "Perimeter of the triangle 440.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Python program to find perimeter of the square\n",
+        "length= int(input(\"Enter the length of the square\"))\n",
+        "side = int(input(\"Enter the side of square\"))\n",
+        "perimeter = length*side\n",
+        "print(\"Perimeter of the square\", perimeter)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_Fl0ecWp11ZQ",
+        "outputId": "e083fea5-5465-4191-80d2-97cee54c5342"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the length of the square20\n",
+            "Enter the side of square20\n",
+            "Perimeter of the square 400\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#If Statement\n",
+        "a = 55\n",
+        "b = 65\n",
+        "if b>a:\n",
+        "  print(\"b is greather than a\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ElDZCfRcozmK",
+        "outputId": "720924a2-26f4-4841-9356-35363c4dba3f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "b is greather than a\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#If Statement\n",
+        "a = 55\n",
+        "b = 20\n",
+        "if b>a:\n",
+        "  print(\"b is greather than a\")"
+      ],
+      "metadata": {
+        "id": "0ZvIbssUqbyh"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name = \"SMM\"\n",
+        "if name==\"SMM\":\n",
+        "  print(\"Hello\", name)"
+      ],
+      "metadata": {
+        "id": "6CogyB5eqsq6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "133dce5c-2a8d-47af-83b8-6bfad91022da"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello SMM\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#If Else Statement\n",
+        "a = 200\n",
+        "b = 300\n",
+        "if b>a:\n",
+        "  print(\"b is greater than a\")\n",
+        "else:\n",
+        "    print (\"a is greater than b\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qDu-F6unfSvJ",
+        "outputId": "f7ba70e6-f83d-4ff4-c318-c1b3c564d429"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "b is greater than a\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#If Else Statement\n",
+        "a = 200\n",
+        "b = 5\n",
+        "if b>a:\n",
+        "  print(\"b is greater than a\")\n",
+        "else:\n",
+        "  print(\"a is greather than b\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZMkwApCkqkEv",
+        "outputId": "6ba10e79-ef8f-4801-bf4e-e95153813a15"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a is greather than b\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#If Else Elif Statement\n",
+        "a = 200\n",
+        "b = 5\n",
+        "if b>a:\n",
+        "  print(\"b is greater than a\")\n",
+        "elif a==b:\n",
+        "  print(\"a and b are equal\")\n",
+        "else:\n",
+        "  print(\"a is greather than b\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "s4x2xauXsDEl",
+        "outputId": "cf1e9e06-5409-439c-b637-3b16ada86b71"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a is greather than b\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Example project of if, elif and else\n",
+        "print(\"Enter Marks Obtained in 3 subjects\")\n",
+        "total = 68\n",
+        "total = 75\n",
+        "total = 40\n",
+        "total = total + total + total\n",
+        "avg = total/3\n",
+        "if avg >=91 and avg <= 100:\n",
+        "  print(\"Your Grade is A1\")\n",
+        "elif avg >=81 and avg < 91:\n",
+        "  print(\"Your Grade is A2\")\n",
+        "else:\n",
+        "  print(\"Your Grade is A3\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jgI9APMlsLXu",
+        "outputId": "816a3d5b-d09d-4f68-8783-06257253eaec"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter Marks Obtained in 3 subjects\n",
+            "Your Grade is A3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Nested If\n",
+        "x = 41\n",
+        "if x>10:\n",
+        "  print(\"above ten\")\n",
+        "if x>20:\n",
+        "  print(\"and also above 20\")\n",
+        "else:\n",
+        "  print(\"but not above 20\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aipREFlOxds3",
+        "outputId": "dfbbe650-f157-4897-8c78-e0f0adceb5cd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "above ten\n",
+            "and also above 20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "1.Exercise, Print \"Hello World\" if a is greater than b\n",
+        "a = 50\n",
+        "b = 10\n",
+        "if a >b:\n",
+        "  print(\"a is greater than b\")"
+      ],
+      "metadata": {
+        "id": "_0WZeX74TxbC",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "7804787a-c596-4af8-9994-510b4709b781"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a is greater than b\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "2.Exercise, Print \"Hello World\" if a is not equal to b\n",
+        "a = 50\n",
+        "b = 10\n",
+        "if a!=b:\n",
+        "  print(\"Hello World\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "x5DByMYJdxsB",
+        "outputId": "a405a3e1-09b3-4cf4-bbcd-b289156f0c10"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello World\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Exercise, Print\"Yes\" if a is equal to b, otherwise print \"No\"\n",
+        "a = 50\n",
+        "b =10\n",
+        "if a == b:\n",
+        "  print(\"Yes\")\n",
+        "else:\n",
+        "  print(\"No\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "II2mHkUejEA2",
+        "outputId": "f0168a81-b004-4142-b9e7-f4d3cca76f74"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "No\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Exercise, Print a is equal to b, print \"1\" if a is greater than b, print \"2\", otherwise print \"3\"\n",
+        "a = 50\n",
+        "b = 10\n",
+        "if a==b:\n",
+        "  print(\"1\")\n",
+        "elif a>b:\n",
+        "  print(\"2\")\n",
+        "else:\n",
+        "  print(\"3\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2uEV6VfrmksM",
+        "outputId": "26e2359b-7d81-4816-d2d3-dde85d574327"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Exercise, Print \"Hello\" if a is equal to b, and c is equal to d\n",
+        "a = 50\n",
+        "b = 10\n",
+        "c = 80\n",
+        "d = 80\n",
+        "if a==b and c==d:\n",
+        "  print(\"Hello\")"
+      ],
+      "metadata": {
+        "id": "VLA8nrwEl3Mi"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Exercise, Print \"Hello\" if a is equal to b, or c is equal to d\n",
+        "a = 50\n",
+        "b = 10\n",
+        "c = 80\n",
+        "d = 80\n",
+        "if a==b or c==d:\n",
+        "  print(\"Hello\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "j33-KxC8wIwv",
+        "outputId": "5720d17f-ea5f-416f-806a-464a7e04d326"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#6.Exercise, Complete the code block, print \"YES\" if 5 is larger than 2\n",
+        "if 5>2:\n",
+        "  print(\"YES\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4w-eAxckvroP",
+        "outputId": "553e0f78-fd77-4408-d4a7-adb684aa8afb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "YES\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#6.Exercise, Use the correct one line short hand syntax to print \"YES\" if a is equal to b, otherwise print (\"NO\")\n",
+        "a = 2\n",
+        "b = 5\n",
+        "print(\"YES\") if a == b else print(\"NO\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZZr5IuxaxC1w",
+        "outputId": "076411a5-5427-447d-943a-840022b3d55f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "NO\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#7.Exercise, Use an if statement to print \"YES\" if either a or b is equal to c\n",
+        "a = 2\n",
+        "b = 50\n",
+        "c = 2\n",
+        "if a == c or b == c:\n",
+        "  print(\"YES\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o2L88DZKB87C",
+        "outputId": "fcd255c2-e5a2-40a4-d2d9-7ff12cde3505"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "YES\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#8.Exercise, Write a Python program to check whether a number is Even or Odd\n",
+        "number = int(input(\"Enter a number:\"))\n",
+        "if (number % 2) == 0:\n",
+        "  print(\"Even number\", number)\n",
+        "else:\n",
+        "  print(\"Odd number\", number)"
+      ],
+      "metadata": {
+        "id": "lFsXGuPpq_X2",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "cb88309f-5093-48ec-eec3-9cb8fc139b93"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number:188\n",
+            "Even number 188\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#9.Exercise, Write a python program to check whether a person is eligible to vote or not in Myanmar\n",
+        "age = int(input(\"Enter you age:\"))\n",
+        "if age >= 18:\n",
+        "  print(\"you are eligible to vote in Myanmar\")\n",
+        "else:\n",
+        "  print(\"You are not eligible to vote in Myanmar\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PlX99RuDfxea",
+        "outputId": "be0f1916-1718-4db4-8980-4b023098bb68"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter you age:12\n",
+            "You are not eligible to vote in Myanmar\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#10.Exercise, Write a program that accepts base and height and calculate the area of triangle\n",
+        "base = int(input(\"Enter the base of the triangle\"))\n",
+        "height = int(input(\"Enter the height of the triangle\"))\n",
+        "area = base * height /2\n",
+        "print(\"area of the triangle\",area)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "T59NdJFMm-vF",
+        "outputId": "9fdae94a-2373-4f84-adc6-357607645d48"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the base of the triangle22\n",
+            "Enter the height of the triangle46\n",
+            "area of the triangle 506.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#11.Exercise, Write a program to find largest among three integers\n",
+        "Number1 = int(input(\"Enter first number\"))\n",
+        "Number2 = int(input(\"Enter second number\"))\n",
+        "Number3 = int(input(\"Enter third number\"))\n",
+        "if (Number1>=Number2) and (Number1>=Number3):\n",
+        "  print(\"the largest number is Number1\", Number1)\n",
+        "elif (Number2>=Number1) and (Number2>=Number3):\n",
+        "  print(\"the largest number is Number2\", Number2)\n",
+        "else:\n",
+        "  print(\"the largest number is Number3\", Number3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "z3TfJ1NNoe1T",
+        "outputId": "38235373-0738-44cb-c4f7-a535f897ea0b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number765\n",
+            "Enter second number8654\n",
+            "Enter third number544\n",
+            "the largest number is Number2 8654\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#12.Exercise, Tickets are sold for a concert at 20 usd each. If 10 tickets are bought then the discount 10%; if 20 tickets are bought the discount is 20%.No more than 20 tickets can be bought in a single transaction.\n",
+        "print(\"Ticket price per unit = 20\")\n",
+        "Number = int(input(\"Enter number of tickets\"))\n",
+        "Price = 20*Number\n",
+        "if Number>=10 and Number<=19:\n",
+        "  Price = (20*Number)-((20*Number)*0.1)\n",
+        "  print(\"Total price after 10 percent discount\", Price)\n",
+        "elif (Number==20):\n",
+        "  Price = (20*Number)-((20*Number)*0.2)\n",
+        "  print(\"Total price after 20 percent discount\", Price)\n",
+        "else:\n",
+        "  Price =20*Number\n",
+        "  print(\"Total payment by normal price\", Price)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BNIsiFh7Lwp9",
+        "outputId": "513a0d7c-4724-4f4f-b915-37783a90f5b7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ticket price per unit = 20\n",
+            "Enter number of tickets12\n",
+            "Total price after 10 percent discount 216.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#13.Exercise, write a program to receive test scores from users. By considering if the test score is followed by the range of table.\n",
+        "score=range(80,100)\n",
+        "for A in score:\n",
+        "  print(A)"
+      ],
+      "metadata": {
+        "id": "_jjo8mIG9mKh"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "score=range(70,79)\n",
+        "for B in score:\n",
+        "  print(B)"
+      ],
+      "metadata": {
+        "id": "buYRkLsLF-oK"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "score=range(60,69)\n",
+        "for C in score:\n",
+        "  print(C)"
+      ],
+      "metadata": {
+        "id": "oJxX_9EBHa2B"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "score=range(50,59)\n",
+        "for D in score:\n",
+        "  print(D)"
+      ],
+      "metadata": {
+        "id": "7CM8VbxaHjw7"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "score=range(0,49)\n",
+        "for F in score:\n",
+        "  print(F)"
+      ],
+      "metadata": {
+        "id": "GnFj5fGvHvVq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#14.Exercise, Write a program to receive the capacity of the boat and the number of passengers required to cross the river. Then find the number of trips to transport passengers across the river.\n",
+        "#Hint: you can calculate the result by using operator% and //\n",
+        "length= int(input(\"Enter vessel length\"))\n",
+        "width= int(input(\"Enter vessel width\"))\n",
+        "Number= length * width // 15\n",
+        "print(\"Capable number of people\", Number)\n",
+        "people=int(input(\"Enter number of people\"))\n",
+        "print(\"Number of people\", people)\n",
+        "frequency = people//Number\n",
+        "print(\"Number of trips to transport passengers across the river\", frequency)\n",
+        "Modulus = people%Number\n",
+        "print(\"Number of people left on the bank\",Modulus)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0o7cxC3sVBOF",
+        "outputId": "6d534a9f-92b6-4a70-ca5d-bc6e5f77321b"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter vessel length20\n",
+            "Enter vessel width8\n",
+            "Capable number of people 10\n",
+            "Enter number of people64\n",
+            "Number of people 64\n",
+            "Number of trips to transport passengers across the river 6\n",
+            "Number of people left on the bank 4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#15.Exercise, Calculate the grade for a given mark. Enter mark 85\n",
+        "#Marks obtained=>=90, 85-89, 80-84, 75-79, 70-74, 65-69, 60-64, 55-59, 50-54, 0-49\n",
+        "#Latter grade= A, A-, B+, B, B-, C+, C, C-, D, F\n",
+        "Mark = int(input(\"Enter the student mark:(0,100)\"))\n",
+        "if mark >= 90:\n",
+        "  print(\"The Grade of student is A\")\n",
+        "elif mark >= 85 and mark <= 89:\n",
+        "  print(\"The Grade of the student is A-\")\n",
+        "elif mark >= 80 and mark <= 84:\n",
+        "  print(\"The Grade of the student is B+\")\n",
+        "elif mark >= 75 and mark <= 79:\n",
+        "  print(\"The Grade of the student is B\")\n",
+        "elif mark >= 70 and mark <= 74:\n",
+        "  print(\"The Grade of the student is B-\")\n",
+        "elif mark >= 65 and mark <= 69:\n",
+        "  print(\"The Grade of the student is C+\")\n",
+        "elif mark >= 60 and mark <= 64:\n",
+        "  print(\"The Grade of the student is C\")\n",
+        "elif mark >= 55 and mark <= 59:\n",
+        "  print(\"The Grade of the student is C-\")\n",
+        "elif mark >= 50 and mark <= 54:\n",
+        "  print(\"The Grade of the student is D\")\n",
+        "else:\n",
+        "  print(\"The Grade of the student is F\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5b0-M59Yd_Bt",
+        "outputId": "a9d1fee6-c73a-488a-cf3a-8e6c736063bb"
+      },
+      "execution_count": 80,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the student mark:(0,100)85\n",
+            "The Grade of student is A\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "2Vr_fZ9Tj9uF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Loop Sample Example\n",
+        "fruits = [\"apple\", \"banana\",\"cherry\"]\n",
+        "for x in fruits:\n",
+        "  print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "E2ZQk9mPR4ct",
+        "outputId": "ccc3e5a3-7a92-499b-9459-80c84cc1d308"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "apple\n",
+            "banana\n",
+            "cherry\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Looping Through a String\n",
+        "for x in \"banana\":\n",
+        "  print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5zzgeWCTSnsM",
+        "outputId": "f8a0d3ac-7c9e-41b6-b10e-a6fb8f35a168"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "b\n",
+            "a\n",
+            "n\n",
+            "a\n",
+            "n\n",
+            "a\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Looping, string, for singleletter in\n",
+        "for singleletter in \"Paris\":\n",
+        "  print(singleletter)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0X9Owz7BTMWk",
+        "outputId": "1ac419a0-49b0-481c-d4c9-5677d77d252e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "P\n",
+            "a\n",
+            "r\n",
+            "i\n",
+            "s\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Looping, string, for singleletter in\n",
+        "for singleletter in \"Korea\":\n",
+        "  print (singleletter)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "a9WAU2qYTj0e",
+        "outputId": "e71c6f79-a354-42ae-815f-8ee76e312ce9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "K\n",
+            "o\n",
+            "r\n",
+            "e\n",
+            "a\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Looping, string, for counting in range\n",
+        "for counting in range (11):\n",
+        "  print(counting)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dkwzDIVjT0f-",
+        "outputId": "859f3fb1-4cea-4e08-b304-3a693e48dd16"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Looping, string, for counting in range\n",
+        "for counting in range (10):\n",
+        "  print(counting)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xtgrhytgQxN7",
+        "outputId": "4b907e02-ce3c-4028-ec2c-1583bc7b7aef"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Looping, string, for counting in range\n",
+        "for counting in range (6):\n",
+        "  print(counting)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RgtWyz9QUIHA",
+        "outputId": "a4a27103-ff48-4f5b-aeca-0dd43d1a8dc8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Looping, string, for counting in range, start at 5, exclude 10\n",
+        "for counting in range (5,10):\n",
+        "  print (counting)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DZEB_lrjURER",
+        "outputId": "549acbd0-811e-436a-e9af-7b98295e5dea"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Looping, string, for counting in range, start 2, exclude 20, and double\n",
+        "for counting in range (2,20,2):\n",
+        "  print(counting)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Mkj9SfpmUjL3",
+        "outputId": "b01ffd01-c973-4658-8b77-cb1677382c42"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "4\n",
+            "6\n",
+            "8\n",
+            "10\n",
+            "12\n",
+            "14\n",
+            "16\n",
+            "18\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Looping, string, for counting in range, start 3, exclude 20, and triple\n",
+        "for counting in range (3,20,3):\n",
+        "  print(counting)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IpkN6aN4VTBB",
+        "outputId": "0e1818e8-c323-4b8e-e303-95b8e483db07"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n",
+            "6\n",
+            "9\n",
+            "12\n",
+            "15\n",
+            "18\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Looping, list\n",
+        "animals = [\"cat\", \"dog\", \"horse\"]\n",
+        "for i in animals:\n",
+        "  print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bVVk2yTKVe-2",
+        "outputId": "d4efe9d6-d18d-4c51-e1ca-9cd4ef827de2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "cat\n",
+            "dog\n",
+            "horse\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Looping list, percentage of price\n",
+        "price = [10.99, 9.99, 4.99, 20]\n",
+        "for item in price:\n",
+        "  percent = item*0.50\n",
+        "  newPrice = item - percent\n",
+        "  print(newPrice)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OtfFDAhOVwj7",
+        "outputId": "8c888dd9-6532-4b75-ef89-10154f8d47ba"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5.495\n",
+            "4.995\n",
+            "2.495\n",
+            "10.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Break Statement Example\n",
+        "for letter in \"Python\":\n",
+        "  if letter == \"h\":\n",
+        "           break\n",
+        "  print(\"current letter\", letter)"
+      ],
+      "metadata": {
+        "id": "B0-6V9QEWkdT",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d330a556-d50d-49c4-a3b2-62d115a7c952"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "current letter P\n",
+            "current letter y\n",
+            "current letter t\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Continue Statement Example\n",
+        "for letter in \"Python\":\n",
+        "  if letter == \"h\":\n",
+        "           continue\n",
+        "  print(\"current letter\", letter)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Y_z2zBiZbGPG",
+        "outputId": "a2128b1e-c62f-4568-8e9e-ac2dd6e69a3c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "current letter P\n",
+            "current letter y\n",
+            "current letter t\n",
+            "current letter o\n",
+            "current letter n\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for letter in \"Python\":\n",
+        "  if letter==\"t\":\n",
+        "          continue\n",
+        "  print(\"Current letter\", letter)"
+      ],
+      "metadata": {
+        "id": "y5zfLwXZYO99",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "72c40257-fcf4-4fe1-dc3a-80b5195df356"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Current letter P\n",
+            "Current letter y\n",
+            "Current letter h\n",
+            "Current letter o\n",
+            "Current letter n\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#The range(,)Function (Condn't)\n",
+        "for x in range (2,6):\n",
+        "  print(x, end=\"\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RaWKezD9YdK-",
+        "outputId": "3e356618-4066-4be1-d91d-605ac7a3c801"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2345"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for x in range(2,30,3):\n",
+        "  print (x, end=\"\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1daVXUoFZff7",
+        "outputId": "47c4bcb6-dd0e-4433-d317-c934ff37448e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "25811141720232629"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Else in For Loop\n",
+        "for x in range(2,30,3):\n",
+        "  print (x, end=\"\")\n",
+        "else:\n",
+        "  print(\"Finally finished\")"
+      ],
+      "metadata": {
+        "id": "3-UgUdO-Z2Us",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "280a3e88-7789-4660-ee0e-41ffb0c7e406"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "25811141720232629Finally finished\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Nested Loops\n",
+        "adj = [\"red\", \"big\", \"tasty\"]\n",
+        "fruits = [\"apple\", \"banana\", \"cherry\"]\n",
+        "for x in adj:\n",
+        "  for y in fruits:\n",
+        "    print(x,y)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dje3xVdFcAuQ",
+        "outputId": "6d7b0b13-d87a-4573-a632-153b982abc77"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "red apple\n",
+            "red banana\n",
+            "red cherry\n",
+            "big apple\n",
+            "big banana\n",
+            "big cherry\n",
+            "tasty apple\n",
+            "tasty banana\n",
+            "tasty cherry\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#pass Statment\n",
+        "for x in [0,1,2,3]:\n",
+        "  pass"
+      ],
+      "metadata": {
+        "id": "hCugkF7ddBsj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#While Loop, i is increment value\n",
+        "i =1\n",
+        "while i<6:\n",
+        "  print(i)\n",
+        "  i+=1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JaZ7ofa-dK3L",
+        "outputId": "c72def67-823c-4c8e-bf57-3f767fa64da5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total = 0\n",
+        "number = int (input(\"Enter a number\"))\n",
+        "while number !=0:\n",
+        "  total = total + number\n",
+        "  number = int(input(\"Enter a number\"))\n",
+        "  print(total)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IA-rApsffZ0k",
+        "outputId": "82346e4a-8d88-46be-b923-7bb8671c18a0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number5\n",
+            "Enter a number5\n",
+            "5\n",
+            "Enter a number3\n",
+            "10\n",
+            "Enter a number0\n",
+            "13\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total = 0\n",
+        "for i in range(5):\n",
+        "  num = int(input(\"Enter a number\"))\n",
+        "  total = total + num\n",
+        "print(\"Your total is\", total)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Acpx2FCYgGhK",
+        "outputId": "ed562065-af6f-45af-bdcd-2e3c48e285a7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number5\n",
+            "Enter a number5\n",
+            "Enter a number5\n",
+            "Enter a number5\n",
+            "Enter a number5\n",
+            "Your total is 25\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#if condition project"
+      ],
+      "metadata": {
+        "id": "4U79xiNZht1N"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
